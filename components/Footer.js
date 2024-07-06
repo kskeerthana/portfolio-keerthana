@@ -1,11 +1,10 @@
-// components/Footer.js
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedinIn, faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
   return (
-    <footer className="flex justify-between items-center w-full p-4 bg-black text-white text-sm" style={{ fontFamily: 'Urbanist, sans-serif' }}>
-      <div>
+    <footer className="flex flex-col md:flex-row justify-between items-center w-full p-4 bg-black text-white text-sm" style={{ fontFamily: 'Urbanist, sans-serif' }}>
+      <div className="mb-4 md:mb-0">
         <p>© 2024 Keerthana Kuppi Srinivasan</p>
       </div>
       <div className="flex space-x-4">

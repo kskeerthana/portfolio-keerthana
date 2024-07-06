@@ -7,17 +7,17 @@ const ProjectCard = ({ title, description, skills, githubLink, thumbnail }) => {
 
   return (
     <div
-      className="relative bg-gray-800 text-white rounded-lg overflow-hidden shadow-lg"
+      className="relative bg-gray-800 text-white rounded-lg overflow-hidden shadow-lg w-full sm:w-1/2 md:w-full lg:w-full p-2"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <Image src={thumbnail} alt={title} width={400} height={200} className="w-full h-48 object-cover" />
       <div className="p-4">
-        <h3 className="text-2xl font-bold mb-2">{title}</h3>
-        <p className="text-gray-400 mb-4">{description}</p>
+        <h3 className="text-xl md:text-2xl font-bold mb-2">{title}</h3>
+        <p className="text-gray-400 text-sm md:text-base mb-4">{description}</p>
         <div className="flex flex-wrap gap-2">
           {skills.map((skill, index) => (
-            <span key={index} className="bg-gray-700 text-gray-200 rounded-full px-3 py-1 text-sm">
+            <span key={index} className="bg-gray-700 text-gray-200 rounded-full px-2 md:px-3 py-1 text-xs md:text-sm">
               {skill}
             </span>
           ))}

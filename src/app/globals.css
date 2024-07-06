@@ -30,6 +30,7 @@ nav {
   background-color: #1A1A1A;
   padding: 0.5rem 1rem;
   border-radius: 9999px;
+  transition: all 0.3s ease-in-out;
 }
 
 @keyframes fadeInUp {

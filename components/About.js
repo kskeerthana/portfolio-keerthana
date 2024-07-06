@@ -6,9 +6,9 @@ import 'react-vertical-timeline-component/style.min.css';
 
 const About = () => {
   return (
-    <div className="flex flex-col items-center text-white p-4">
+    <div className="flex flex-col items-center text-white p-4 mt-32">
       {/* Introduction Section */}
-      <section className="flex flex-col md:flex-row items-center justify-between w-full max-w-4xl h-screen mb-12">
+      <section className="flex flex-col md:flex-row items-center justify-between w-full max-w-4xl mb-12">
         <div className="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
           <h1 className="text-4xl font-bold mb-4">Meet Keerthana,</h1>
           <p className="text-lg text-gray-400">
