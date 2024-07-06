@@ -6,7 +6,7 @@ const Header = () => {
       <div className="flex items-center space-x-52">
         <Link href="/" legacyBehavior>
           <a>
-            <img src="/profile.jpg" alt="Profile" className="w-10 h-10 rounded-full" />
+            <img src="/images/profileImg.jpeg" alt="Profile" className="w-10 h-10 rounded-full" />
           </a>
         </Link>
         <nav className="flex space-x-4 p-4 rounded-full" style={{ backgroundColor: '#1A1A1A' }}>
