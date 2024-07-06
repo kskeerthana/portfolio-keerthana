@@ -1,0 +1,45 @@
+[
+    {
+      "title": "Dollar Dashboard",
+      "description": "Created a SPA for financial management with responsive UI and RESTful APIs using Node.js and MongoDB.",
+      "skills": ["React", "NodeJS", "ExpressJS", "MongoDB"],
+      "githubLink": "https://github.com/kskeerthana/DollarDashboard",
+      "thumbnail": "/images/dollarDash.png"
+    },
+    {
+      "title": "WordWise",
+      "description": "Developed 'WordWise' using SwiftUI and Firebase, achieving a 10% vocabulary improvement in trials.",
+      "skills": ["SwiftUI", "UIKit", "AppKit", "Storyboard", "Firebase"],
+      "githubLink": "https://github.com/kskeerthana/WordWise",
+      "thumbnail": "/images/wordWise.png"
+    },
+    {
+      "title": "UberClone",
+      "description": "Built a ride-sharing app with React Native and Google Maps API, enabling GPS-based fare estimation.",
+      "skills": ["React Native", "Tailwind CSS", "Google Maps API"],
+      "githubLink": "https://github.com/kskeerthana/UberClone",
+      "thumbnail": "/images/uberClone.png"
+    },
+    {
+      "title": "Impact of Sentiment on Cryptocurrency Prices",
+      "description": "Predicted cryptocurrency prices using machine learning models and FinBERT sentiment analysis.",
+      "skills": ["Python", "Random Forest", "XGBoost", "Linear Regression", "FinBERT"],
+      "githubLink": "https://github.com/kskeerthana/Sentiment-Impact-on-Crypto-Prices",
+      "thumbnail": "/images/datascience.jpeg"
+    },
+    {
+      "title": "WavePortal",
+      "description": "Developed a site engaging users with an Ethereum smart contract, processing over 150 messages.",
+      "skills": ["React", "Solidity", "Hardhat"],
+      "githubLink": "https://github.com/kskeerthana/BlockWave",
+      "thumbnail": "/images/wavePortal.png"
+    },
+    {
+      "title": "Vickery Auction",
+      "description": "Deployed a blockchain auction platform using NFTs and ERC20 tokens, with a React-based UI.",
+      "skills": ["Solidity", "Foundry", "React", "IPFS"],
+      "githubLink": "https://github.com/kskeerthana/VickeryAuction-Final",
+      "thumbnail": "/images/vickery.jpeg"
+    }
+  ]
+  
