@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedinIn, faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedinIn, faGithub, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
   return (
@@ -8,13 +8,13 @@ const Footer = () => {
         <p>© 2024 Keerthana Kuppi Srinivasan</p>
       </div>
       <div className="flex space-x-4">
-        <a href="https://github.com/your-profile" target="_blank" rel="noopener noreferrer" className="footer-icon">
+        <a href="https://github.com/kskeerthana" target="_blank" rel="noopener noreferrer" className="footer-icon">
           <FontAwesomeIcon icon={faGithub} />
         </a>
-        <a href="https://twitter.com/your-profile" target="_blank" rel="noopener noreferrer" className="footer-icon">
-          <FontAwesomeIcon icon={faTwitter} />
+        <a href="https://x.com/Keerthana16050" target="_blank" rel="noopener noreferrer" className="footer-icon">
+          <FontAwesomeIcon icon={faXTwitter} />
         </a>
-        <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" className="footer-icon">
+        <a href="www.linkedin.com/in/keerthanaksrinivasan" target="_blank" rel="noopener noreferrer" className="footer-icon">
           <FontAwesomeIcon icon={faLinkedinIn} />
         </a>
       </div>
