@@ -1,23 +1,24 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const ProjectCard = ({ title, description, skills, githubLink, thumbnail }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
     <div
-      className="relative bg-gray-800 text-white rounded-lg overflow-hidden shadow-lg w-full sm:w-1/2 md:w-full lg:w-full p-2"
+      className="relative bg-gray-800 text-white rounded-lg overflow-hidden shadow-lg transform transition-transform duration-500 hover:scale-105 sm:hover:scale-105 w-full"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <Image src={thumbnail} alt={title} width={400} height={200} className="w-full h-48 object-cover" />
+      <Image src={thumbnail} alt={title} width={500} height={250} className="w-full h-48 object-cover" />
       <div className="p-4">
-        <h3 className="text-xl md:text-2xl font-bold mb-2">{title}</h3>
-        <p className="text-gray-400 text-sm md:text-base mb-4">{description}</p>
-        <div className="flex flex-wrap gap-2">
+        <h3 className="text-2xl font-bold mb-2">{title}</h3>
+        <p className="text-gray-400 mb-4">{description}</p>
+        <div className="flex flex-wrap gap-2 mb-4">
           {skills.map((skill, index) => (
-            <span key={index} className="bg-gray-700 text-gray-200 rounded-full px-2 md:px-3 py-1 text-xs md:text-sm">
+            <span key={index} className="bg-gray-700 text-gray-200 rounded-full px-3 py-1 text-sm">
               {skill}
             </span>
           ))}
@@ -28,9 +29,9 @@ const ProjectCard = ({ title, description, skills, githubLink, thumbnail }) => {
           href={githubLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="absolute inset-0 bg-black bg-opacity-75 flex items-center justify-center text-2xl text-white"
+          className="absolute inset-0 bg-black bg-opacity-75 flex items-center justify-center text-4xl text-white"
         >
-          <FontAwesomeIcon icon={['fab', 'github']} />
+          <FontAwesomeIcon icon={faGithub} />
         </a>
       )}
     </div>

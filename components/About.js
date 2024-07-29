@@ -3,13 +3,20 @@ import profilePic from '../public/profile.jpeg';
 import TimelineItem from '../components/Timeline';
 import { VerticalTimeline } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+import { useEffect, useState } from 'react';
 
 const About = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   return (
     <div className="flex flex-col items-center text-white p-4 mt-32">
       {/* Introduction Section */}
       <section className="flex flex-col md:flex-row items-center justify-between w-full max-w-4xl mb-12">
-        <div className="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
+        <div className={`md:w-1/2 text-center md:text-left mb-8 md:mb-0 transition-transform duration-[1500ms] ease-in-out ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'}`}>
           <h1 className="text-4xl font-bold mb-4">Meet Keerthana,</h1>
           <p className="text-lg text-gray-400">
             As a full-stack dev, I live for those "aha!" moments when an idea transitions into a fully-fledged, real-world application. 
@@ -17,7 +24,7 @@ const About = () => {
             scaling effortlessly. I'm a problem-solver at heart, constantly tinkering and learning to deliver top-notch solutions.
           </p>
         </div>
-        <div className="md:w-1/2 flex justify-center">
+        <div className={`md:w-1/2 flex justify-center transition-transform duration-[1500ms] ease-in-out ease-in-out ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}>
           <Image src={profilePic} alt="Profile Picture" className="rounded-lg" width={300} height={300} />
         </div>
       </section>
@@ -50,9 +57,9 @@ const About = () => {
             subtitle="Software Engineer Intern"
             period="Boston, MA | 2024"
             description={[
-              'Engineered an interactive application for TAs and students using React Native, increasing user engagement by 40%.',
-              'Enhanced backend communication and scalability by integrating the UI with AWS Lambda, resulting in a 25% efficiency improvement.',
-              'Designed and maintained PostgreSQL databases for user data, posts, and interactions, improving system performance by 30%.',
+              'Developed React Native app for TAs and students, boosting engagement 40%.',
+'Integrated UI with AWS Lambda, improving efficiency by 25%.',
+'Optimized PostgreSQL databases, enhancing system performance 30%.',
             ]}
           />
           <TimelineItem
@@ -60,11 +67,11 @@ const About = () => {
             subtitle="Full Stack Developer"
             period="Bengaluru, India | 2020-2022"
             description={[
-              'Engineered 15+ Django REST Framework API endpoints with 87% test coverage, supporting 100+ API calls/minute.',
-              'Optimized chatbot response times from 800ms to <300ms using Google Dialogflow, websockets, and caching.',
-              'Launched 5 voice apps on Google Assistant with Dialogflow, serving 500+ weekly users.',
-              'Improved conversation completion rates by 35% after analyzing user logs and addressing 21 common failure points.',
-              'Enhanced user experience across voice assistant platforms by streamlining functionalities and API performance, leveraging data-driven optimizations.',
+              'Built Django REST API endpoints with 87% test coverage, handling 100+ calls/minute.',
+'Reduced chatbot response times to <300ms using Dialogflow, websockets, and caching.',
+'Launched 5 Google Assistant voice apps serving 500+ weekly users.',
+'Increased conversation completion rates 35% by addressing common failure points.',
+'Optimized voice assistant UX across platforms using data-driven improvements.',
             ]}
           />
         </VerticalTimeline>

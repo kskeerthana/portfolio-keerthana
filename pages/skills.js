@@ -2,6 +2,7 @@ import { FaPython, FaJs, FaSwift, FaJava, FaReact, FaNodeJs, FaDocker, FaGit, Fa
 import { SiTypescript, SiSolidity, SiNextdotjs, SiExpress, SiGooglecloud, SiBootstrap, SiMongodb, SiPostgresql, SiFirebase } from 'react-icons/si';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { useEffect, useState } from 'react';
 
 const skillsData = [
   {
@@ -39,22 +40,28 @@ const skillsData = [
 ];
 
 const Skills = () => {
+  const [showSkills, setShowSkills] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowSkills(true);
+    }, 100);
+  }, []);
+
   return (
-    <div className="flex flex-col min-h-screen">
+    <div>
       <Header />
-      <div className="container mx-auto p-8 flex-grow mt-24">
-      {/* <div className="mb-8 text-center">
-          <p className="text-xl text-white-400">
-            Curious to learn new things and experiment with emerging technologies. These are some of the major programming languages, frameworks, tools, and platforms I have worked with:
-          </p>
-        </div> */}
+      <div className="container mx-auto p-8 mt-16">
+        <p className="text-center text-gray-200 mb-8"></p>
         {skillsData.map((section, index) => (
-          <div key={index} className="mb-8">
+          <div key={index} className="mb-12">
             <h2 className="text-lg font-bold mb-4 text-center text-gray-200">{section.category}</h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 justify-center items-center">
+            <div className={`grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 justify-center items-center transform transition-opacity duration-1000 ${showSkills ? 'opacity-100' : 'opacity-0'}`}>
               {section.skills.map((skill, idx) => (
                 <div key={idx} className="flex flex-col items-center">
-                  <div className="text-4xl mb-2" style={{ color: skill.icon.props.color }}>{skill.icon}</div>
+                  <div className="text-4xl mb-2 transition-transform duration-300 hover:scale-110" style={{ color: skill.icon.props.color }}>
+                    {skill.icon}
+                  </div>
                   <p className="text-center text-sm">{skill.name}</p>
                 </div>
               ))}
