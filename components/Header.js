@@ -26,7 +26,7 @@ const Header = () => {
         <Link href="/skills" legacyBehavior>
           <a className="hover:text-gray-300">Skills</a>
         </Link>
-        <a href="https://drive.google.com/file/d/1zfuwf0uYheRZBkw2GV3G__REkrJS3aLz/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">
+        <a href="https://drive.google.com/file/d/12f5EnxJEyvQYdjHekbM7MixiumxcA2wy/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">
           Resume
         </a>
       </nav>
