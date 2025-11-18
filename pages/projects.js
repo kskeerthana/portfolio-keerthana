@@ -6,10 +6,18 @@ import projectData from '../data/projects.json';
 const ProjectsPage = () => {
   const [showProjects, setShowProjects] = useState(false);
 
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setShowProjects(true);
+  //   }, 100);
+  // }, []);
   useEffect(() => {
-    setTimeout(() => {
+    // small delay just so it doesn't pop in instantly
+    const timer = setTimeout(() => {
       setShowProjects(true);
-    }, 100);
+    }, 50);
+
+    return () => clearTimeout(timer);
   }, []);
 
   return (

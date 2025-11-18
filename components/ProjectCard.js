@@ -12,7 +12,15 @@ const ProjectCard = ({ title, description, skills, githubLink, thumbnail }) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <Image src={thumbnail} alt={title} width={500} height={250} className="w-full h-48 object-cover" />
+      <div className="relative w-full aspect-[16/9] overflow-hidden">
+        <Image
+          src={thumbnail}
+          alt={title}
+          fill
+          className="object-cover"
+          sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+        />
+      </div>
       <div className="p-4">
         <h3 className="text-2xl font-bold mb-2">{title}</h3>
         <p className="text-gray-400 mb-4">{description}</p>

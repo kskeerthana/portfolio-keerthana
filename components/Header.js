@@ -26,11 +26,11 @@ const Header = () => {
         <Link href="/skills" legacyBehavior>
           <a className="hover:text-gray-300">Skills</a>
         </Link>
-        <a href="https://drive.google.com/file/d/1SD7agCNEg73v1tIMHFNyy2Kt0nJDs5EX/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">
+        <a href="https://drive.google.com/file/d/1oUXsMVTsGZQAhhjlycMJRrGimtgked8M/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">
           Resume
         </a>
       </nav>
-      <a href="mailto:kuppisrinivasan.k@northeastern.edu" className="hidden md:block">
+      <a href="mailto:k.kuppisrinivasan@outlook.com" className="hidden md:block">
         <button className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full">
           Contact
         </button>
